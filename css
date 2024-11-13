@@ -7,8 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0b0c2a;
-    color: #f5f5f5;
+    background-color: #f5f5f5;
+    color: #333;
     line-height: 1.6;
     padding: 20px;
 }
@@ -22,60 +22,75 @@ header {
 
 header h1 {
     font-size: 2.8em;
-    color: #45a1ff;
+    color: #222;
     margin-bottom: 10px;
 }
 
 header p {
     font-size: 1.2em;
-    color: #d9d9e3;
+    color: #555;
 }
 
-/* Introdução */
-.introduction {
-    background-color: #1b1d42;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 40px;
+/* Galeria de Artes */
+.art-gallery {
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.introduction h2 {
-    color: #45a1ff;
+.art-gallery h2 {
     font-size: 2em;
-    margin-bottom: 15px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.introduction p {
-    font-size: 1.1em;
-    color: #d9d9e3;
+.art-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
 }
 
-/* Container de vídeos */
-.video-container {
+.art-images img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.art-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Lista de Vídeos */
+.video-list {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.video-list h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.videos {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.video-container h2 {
-    width: 100%;
-    text-align: center;
-    color: #45a1ff;
-    margin-bottom: 20px;
-    font-size: 2em;
-}
-
 .video {
     flex: 1 1 300px;
     max-width: 300px;
     aspect-ratio: 16/9;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
-    background-color: #000;
+    background-color: #ddd;
     transition: transform 0.3s, box-shadow 0.3s;
-    border: 2px solid #303057;
+    border: 2px solid #ccc;
 }
 
 .video:hover {
@@ -94,16 +109,17 @@ footer {
     text-align: center;
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 1px solid #303057;
+    border-top: 1px solid #ccc;
     font-size: 0.9em;
-    color: #a0a0c0;
+    color: #777;
 }
 
 footer a {
-    color: #45a1ff;
+    color: #333;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
+
